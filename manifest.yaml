@@ -1,0 +1,13 @@
+image: johnatmars/aliendao:latest
+tags: ["1.0.0", "1.0"]
+manifests:
+  -
+    image: johnatmars/aliendao-arm64:latest
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: johnatmars/aliendao-amd64:latest
+    platform:
+      architecture: amd64
+      os: linux
