@@ -17,6 +17,7 @@ def _log(_repo_id, _type, _msg):
 
 
 def _download_model(_repo_id, _repo_type):
+    print('download from huggingface...')
     if _repo_type == "model":
         _local_dir = 'dataroot/models/' + _repo_id
     else:
@@ -116,6 +117,7 @@ def _fetchFileList(files):
 
 
 def _download_model_from_mirror(_repo_id, _repo_type, _token, _e):
+    print('download from mirror...')
     filesUrl = 'https://e.aliendao.cn/models/' + _repo_id + '?json=true'
     response = requests.get(filesUrl)
     if response.status_code != 200:

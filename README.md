@@ -36,3 +36,14 @@ python model_download.py --repo_id tatsu-lab/alpaca --repo_type dataset
 
 ```
 
+## 4、使用docker下载
+
+```bash
+docker run -v /path/to/wherever/you/want:/root/aliendao/dataroot/models johnatmars/aliendao:latest python /root/aliendao/model_download.py --repo_id meta-llama/Llama-2-7b-chat-hf
+
+如果需要验证身份
+# 1 本地终端登录huggingface
+# 2 mount本地的hugginface文件
+docker run -v /path/to/huggingface/cache:/root/.cache/huggingface  -v /path/to/wherever/you/want:/root/aliendao/dataroot/models johnatmars/aliendao:latest python /root/aliendao/model_download.py --repo_id meta-llama/Llama-2-7b-chat-hf
+
+```
